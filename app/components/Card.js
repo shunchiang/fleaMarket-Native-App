@@ -27,10 +27,11 @@ const styles = StyleSheet.create({
   },
   title: {
     marginBottom: 7,
+    color: colors.black,
   },
   subTitle: {
     color: colors.secondary,
-    fontWeight: bold,
+    fontWeight: "bold",
   },
   image: {
     width: "100%",
