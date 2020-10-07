@@ -5,14 +5,18 @@ import defaultStyles from "../config/styles";
 
 export default function AppTextInput({ icon, ...props }) {
   return (
-    <View style={styles.container}>
+    <View style={[styles.container, { ...props }]}>
       <MaterialCommunityIcons
         name={icon}
         size={20}
         color={defaultStyles.colors.medium}
         style={styles.icon}
       />
-      <TextInput style={defaultStyles.text} {...props} />
+      <TextInput
+        placeholderTextColor={defaultStyles.colors.medium}
+        style={defaultStyles.text}
+        {...props}
+      />
     </View>
   );
 }
@@ -21,7 +25,6 @@ const styles = StyleSheet.create({
   container: {
     backgroundColor: defaultStyles.colors.light,
     flexDirection: "row",
-    width: "100%",
     padding: 15,
     marginVertical: 10,
     alignItems: "center",
